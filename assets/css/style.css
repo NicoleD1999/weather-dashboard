@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(53, 75, 62);
+}
+.head{
+    background-image: url("https://image.shutterstock.com/image-vector/luxury-gold-nature-green-background-260nw-1711748359.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 210px;
+
+}
+.head-text{
+    position: relative;
+    bottom: 55px;
+    background-color: rgb(212, 209, 197);
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+.weather-text{
+    font-size: 80px;
+    font-family: 'Amatic SC', cursive;
+}
+.prepare-text {
+    font-size: 40px;
+    font-family: 'Amatic SC', cursive;
+}
+.search-row{
+   display: inline-block;
+}
+.searchRow {
+    margin-left: 5px;
+}
+.search-input {
+    height: 50px;;
+    margin-bottom: 10px;
+}
+.searchBtn {
+    height: 30px;
+}
+.city-text {
+    font-size: 35px;
+    font-family: 'BIZ UDMincho', serif;
+}
+.border {
+    padding-left: 10px;
+    padding-right: 1070px;
+    border: 3px, solid, rgb(212, 209, 197);
+    background-color: rgb(212, 209, 197);
+}
+.weather-cards{
+    margin-left: 405px;
+    margin-bottom: 10px;
+}
+.cards{
+    margin:5px;
+}
+.cardBody {
+    background-color: rgb(212, 209, 197);
+    border: rgb(212, 209, 197);
+}
+
