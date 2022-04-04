@@ -20,21 +20,21 @@
       </div>
     <div class="search-row">
         <div class="row searchRow">
-          <div class=" card col-sm-2">
+          <div class=" card col-sm-2 search-bar">
               <h4 class="city-text">Search for a City:</h4>
                 <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search" id="search-city" aria-label="Search">
-                <button type="button" class="btn btn-primary btn-block searchBtn">Search</button>
+                <button type="button" class="btn btn-secondary btn-block searchBtn">Search</button>
           </div>
           <div class="col-sm-10">
           <div class= "card " id="current-weather">
-              <!-- <h2>Atlanta</h2>
-              <h4>Temp</h4>
-              <h4>Wind</h4>
-              <h4>Humidity</h4>
-              <h4>UV Index</h4> -->
+              <h2 class="city-name">City</h2>
+              <h4 class="city-temp text-size">Temp:</h4>
+              <h4 class="city-wind text-size">Wind:</h4>
+              <h4 class="city-humidity text-size">Humidity:</h4>
+              <h4><span class="city-index text-size">UV Index:</span></h4>
           </div>
           <div class="weather-cards">
-            <h4>5 Day Forecast:</h4>
+            <h4 id="forecast-text">5 Day Forecast:</h4>
             <div class="row">
                  <div class="card cl-sm-2 cards" style="width: 13rem;">
                   <div class="card-body cardBody">

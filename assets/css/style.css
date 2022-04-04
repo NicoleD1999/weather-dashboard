@@ -33,16 +33,25 @@ body {
     margin-left: 5px;
     margin-right: 5px;
 }
+.search-bar{
+    background-color: rgb(212, 209, 197);
+}
 .search-input {
     height: 50px;;
     margin-bottom: 10px;
 }
 .searchBtn {
-    border-bottom: 2px solid black;
+    border: none;
+    background-color: rgb(53, 75, 62);
+}
+.searchBtn :hover{
+    border: none;
+    background-color: rgb(53, 75, 62);
 }
 .city-text {
     font-size: 35px;
     font-family: 'BIZ UDMincho', serif;
+    color: black;
 }
 .border {
     padding-left: 10px;
@@ -53,6 +62,21 @@ body {
 .weather-cards{
     margin-bottom: 10px;
     margin-left: 9px;
+}
+#current-weather{
+    background-color: rgb(212, 209, 197);
+    font-family: 'Amatic SC', cursive;
+}
+.city-name{
+    font-size: 60px;
+}
+.text-size{
+    font-size: 40px;
+}
+#forecast-text{
+    font-size: 35px;
+    font-family: 'BIZ UDMincho', serif;
+    color: black;
 }
 .cards{
     margin:20px;
