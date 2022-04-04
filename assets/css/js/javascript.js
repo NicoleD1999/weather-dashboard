@@ -21,11 +21,10 @@ function getApi() {
     })
     .then(function (data) {
       console.log(data);
-      var iconId = (data.weather[0].icon);
-      var iconUrl = 'https://openweathermap.org/img/wn/' + iconId + '@2x.png'
-      var displayIcon = $("<img>")
-      cityName.append(displayIcon);
-      displayIcon.attr('src', 'https://openweathermap.org/img/wn/' + iconId + '@2x.png')
+      var iconEl = $(".icon-current")
+      var dataIcon= (data.weather[0].icon)
+      var iconUrl="http://openweathermap.org/img/wn/" + dataIcon + "@2x.png"
+      iconEl.attr("src", iconUrl);
       cityName.text( data.name+ " " + moment().format('L'));
       cityTemp.text("Temp: " + data.main.temp + " ℉")
       cityWind.text("Wind: " + data.wind.speed + " MPH")
@@ -59,6 +58,9 @@ function getApi() {
           cardDateOne.text("Date: " + dataone.daily[0].dt)
           var reformatDate = moment(cardDateOne).add(1, "days").format("M/D/YY")
           cardDateOne.text("Date: " + reformatDate)
+          var dataIconOne= (dataone.daily[0].weather[0].icon)
+          var iconUrlOne="http://openweathermap.org/img/wn/" + dataIconOne + "@2x.png"
+          cardIconOne.attr("src", iconUrlOne);
           cardTempOne.text("Temp: " + dataone.daily[0].temp.day + "℉")
           cardWindOne.text("Wind: " + dataone.daily[0].wind_speed + " MPH")
           cardHumidityOne.text("Humidity: " + dataone.daily[0].humidity + " %")
@@ -66,6 +68,9 @@ function getApi() {
           cardDateTwo.text("Date: " + dataone.daily[1].dt)
           var reformatDateTwo = moment(cardDateOne).add(2, "days").format("M/D/YY")
           cardDateTwo.text("Date: " + reformatDateTwo)
+          var dataIconTwo= (dataone.daily[1].weather[0].icon)
+          var iconUrlTwo="http://openweathermap.org/img/wn/" + dataIconTwo + "@2x.png"
+          cardIconTwo.attr("src", iconUrlTwo);
           cardTempTwo.text("Temp: " + dataone.daily[1].temp.day + "℉")
           cardWindTwo.text("Wind: " + dataone.daily[1].wind_speed + " MPH")
           cardHumidityTwo.text("Humidity: " + dataone.daily[1].humidity + " %")
@@ -73,6 +78,9 @@ function getApi() {
           cardDateThree.text("Date: " + dataone.daily[2].dt)
           var reformatDateThree = moment(cardDateOne).add(3, "days").format("M/D/YY")
           cardDateThree.text("Date: " + reformatDateThree)
+          var dataIconThree= (dataone.daily[2].weather[0].icon)
+          var iconUrlThree="http://openweathermap.org/img/wn/" + dataIconThree + "@2x.png"
+          cardIconThree.attr("src", iconUrlThree);
           cardTempThree.text("Temp: " + dataone.daily[2].temp.day + "℉")
           cardWindThree.text("Wind: " + dataone.daily[2].wind_speed + " MPH")
           cardHumidityThree.text("Humidity: " + dataone.daily[2].humidity + " %")
@@ -80,6 +88,9 @@ function getApi() {
           cardDateFour.text("Date: " + dataone.daily[3].dt)
           var reformatDateFour = moment(cardDateFour).add(4, "days").format("M/D/YY")
           cardDateFour.text("Date: " + reformatDateFour)
+          var dataIconFour= (dataone.daily[3].weather[0].icon)
+          var iconUrlFour="http://openweathermap.org/img/wn/" + dataIconFour + "@2x.png"
+          cardIconFour.attr("src", iconUrlFour);
           cardTempFour.text("Temp: " + dataone.daily[3].temp.day + "℉")
           cardWindFour.text("Wind: " + dataone.daily[3].wind_speed + " MPH")
           cardHumidityFour.text("Humidity: " + dataone.daily[3].humidity + " %")
@@ -87,6 +98,9 @@ function getApi() {
           cardDateFive.text("Date: " + dataone.daily[4].dt)
           var reformatDateFive = moment(cardDateFive).add(5, "days").format("M/D/YY")
           cardDateFive.text("Date: " + reformatDateFive)
+          var dataIconFive= (dataone.daily[4].weather[0].icon)
+          var iconUrlFive="http://openweathermap.org/img/wn/" + dataIconFive + "@2x.png"
+          cardIconFive.attr("src", iconUrlFive);
           cardTempFive.text("Temp: " + dataone.daily[4].temp.day + "℉")
           cardWindFive.text("Wind: " + dataone.daily[4].wind_speed + " MPH")
           cardHumidityFive.text("Humidity: " + dataone.daily[4].humidity + " %")
@@ -95,26 +109,31 @@ function getApi() {
 }
 
 var cardDateOne = $("#card-date-one")
+var cardIconOne = $(".card-icon-one")
 var cardTempOne = $(".card-temp-one")
 var cardWindOne = $("#card-wind-one")
 var cardHumidityOne = $("#card-humidity-one")
 
 var cardDateTwo = $("#card-date-two")
+var cardIconTwo = $(".card-icon-two")
 var cardTempTwo = $(".card-temp-two")
 var cardWindTwo = $("#card-wind-two")
 var cardHumidityTwo = $("#card-humidity-two")
 
 var cardDateThree = $("#card-date-three")
+var cardIconThree = $(".card-icon-three")
 var cardTempThree = $(".card-temp-three")
 var cardWindThree = $("#card-wind-three")
 var cardHumidityThree = $("#card-humidity-three")
 
 var cardDateFour = $("#card-date-four")
+var cardIconFour = $(".card-icon-four")
 var cardTempFour = $(".card-temp-four")
 var cardWindFour = $("#card-wind-four")
 var cardHumidityFour = $("#card-humidity-four")
 
 var cardDateFive = $("#card-date-five")
+var cardIconFive = $(".card-icon-five")
 var cardTempFive = $(".card-temp-five")
 var cardWindFive = $("#card-wind-five")
 var cardHumidityFive = $("#card-humidity-five")
