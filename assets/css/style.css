@@ -43,6 +43,7 @@ body {
 .searchBtn {
     border: none;
     background-color: rgb(53, 75, 62);
+    margin-bottom: 10px;
 }
 .searchBtn :hover{
     border: none;
