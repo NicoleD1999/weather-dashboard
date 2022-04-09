@@ -28,7 +28,6 @@ function storeCityNames() {
 }
 function getCityNames(){
   var storedCity = JSON.parse(localStorage.getItem("cityNames"));
-  KU
   console.log(storedCity)
   var cityUrl='https://api.openweathermap.org/data/2.5/weather?q=' + storedCity + '&appid=089135872fa5031f91618d985e90536c&units=imperial';
   fetch(cityUrl)

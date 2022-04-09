@@ -1,5 +1,14 @@
-# 06 Server-Side APIs: Weather Dashboard
+#Weather Dashboard
+
 For this Application the user will be able to view current weather information by city name. 
+
+Technology Used -
+
+    ‣ Bootstrap CSS
+
+    ‣ JQuery
+
+    ‣ Google Fonts
 
 
 IF the user types in a city name THEN they are able to view current weather information for that city as well as a 5 day forecast.
@@ -21,4 +30,7 @@ In the 5 day forecast the user will be able to see the expected temperature, win
 ![alt](./assets/css/images/weather-browser-one.png)
 ![alt](./assets/css/images/weather-browser.png)
 Click [here](https://nicoled1999.github.io/weather-dashboard/) to view my website
+
+![](https://img.shields.io/badge/License-MIT-blueviolet)
+
 
