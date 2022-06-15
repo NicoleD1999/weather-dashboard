@@ -19,17 +19,13 @@ function renderCityNames() {
   searchBar.append(createButton)
   cityNames.push(createButton.text())
   $(createButton).on("click", function(){
-    getCityNames();
+    getCityNames(createButton);
   })
 
 }
-function storeCityNames() {
-  localStorage.setItem("cityNames", JSON.stringify(cityNames));
-}
-function getCityNames(){
-  var storedCity = JSON.parse(localStorage.getItem("cityNames"));
-  console.log(storedCity)
-  var cityUrl='https://api.openweathermap.org/data/2.5/weather?q=' + storedCity + '&appid=089135872fa5031f91618d985e90536c&units=imperial';
+function getCityNames(createButton){
+  const currentCity = createButton.text()
+  var cityUrl='https://api.openweathermap.org/data/2.5/weather?q=' + currentCity + '&appid=089135872fa5031f91618d985e90536c&units=imperial';
   fetch(cityUrl)
     .then(function (response) {
       return response.json();
@@ -130,7 +126,6 @@ function getCityNames(){
 $ (searchBtn).on("click", function(){
   getApi();
   renderCityNames();
-  storeCityNames();
 });
 
 function getApi() {
